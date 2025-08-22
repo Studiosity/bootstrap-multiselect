@@ -456,7 +456,7 @@
             buttonTextAlignment: 'center',
             enableResetButton: false,
             templates: {
-                button: '<button type="button" class="multiselect dropdown-toggle" data-toggle="dropdown"><span class="multiselect-selected-text"></span></button>',
+                button: '<button type="button" class="multiselect dropdown-toggle" data-bs-toggle="dropdown" data-toggle="dropdown"><span class="multiselect-selected-text"></span></button>',
                 popupContainer: '<div class="multiselect-container dropdown-menu"></div>',
                 filter: '<div class="multiselect-filter d-flex align-items-center"><i class="fas fa-sm fa-search text-muted"></i><input type="search" class="multiselect-search form-control" /></div>',
                 buttonGroup: '<div class="multiselect-buttons btn-group" style="display:flex;"></div>',
@@ -909,7 +909,7 @@
             }
 
             if (this.options.enableCollapsibleOptGroups) {
-                let clickableSelector = this.options.enableClickableOptGroups 
+                let clickableSelector = this.options.enableClickableOptGroups
                     ? ".multiselect-group .caret-container"
                     : ".multiselect-group";
 
@@ -936,11 +936,11 @@
 
         /**
          * Create a checkbox container with input and label based on given values
-         * @param {JQuery} $item 
-         * @param {String} label 
-         * @param {String} name 
-         * @param {String} value 
-         * @param {String} inputType 
+         * @param {JQuery} $item
+         * @param {String} label
+         * @param {String} name
+         * @param {String} value
+         * @param {String} inputType
          * @returns {JQuery}
          */
         createCheckbox: function ($item, labelContent, name, value, title, inputType, internalId) {
@@ -999,7 +999,7 @@
             if (isGroupOption && this.options.indentGroupOptions) {
                 if (this.options.enableCollapsibleOptGroups) {
                     $option.addClass("multiselect-group-option-indented-full")
-                } 
+                }
                 else {
                     $option.addClass("multiselect-group-option-indented");
                 }
@@ -1177,7 +1177,7 @@
                     this.$filter = $(this.options.templates.filter);
                     $('input', this.$filter).attr('placeholder', this.options.filterPlaceholder);
 
-                    // Handles optional filter clear button                        
+                    // Handles optional filter clear button
                     if (!this.options.includeFilterClearBtn) {
                         this.$filter.find(".multiselect-search").attr("type", "text");
 
@@ -1958,7 +1958,7 @@
 
         /**
          * Gets a select option by its id
-         * @param {String} id 
+         * @param {String} id
          * @returns {JQuery}
          */
         getOptionById: function (id) {
@@ -2022,7 +2022,7 @@
 
         /**
          * Generate a unique identifier inside the multiselect namespace and adds it as an data attribute to the related element
-         * @param {JQuery} $relatedElement 
+         * @param {JQuery} $relatedElement
          * @returns unique id
          */
         createAndApplyUniqueId: function ($relatedElement) {
