@@ -439,15 +439,14 @@
             includeResetDivider: false,
             resetText: 'Reset',
             templates: {
-                button: '<button type="button" class="multiselect dropdown-toggle" data-bs-toggle="dropdown" data-toggle="dropdown"><span class="multiselect-selected-text"></span></button>',
-                popupContainer: '<div class="multiselect-container dropdown-menu"></div>',
-                filter: '<div class="multiselect-filter d-flex align-items-center"><i class="fas fa-sm fa-search text-muted"></i><input type="search" class="multiselect-search form-control" /></div>',
-                buttonGroup: '<div class="multiselect-buttons btn-group" style="display:flex;"></div>',
-                buttonGroupReset: '<button type="button" class="multiselect-reset btn btn-secondary btn-block"></button>',
-                option: '<button type="button" class="multiselect-option dropdown-item"></button>',
-                divider: '<div class="dropdown-divider"></div>',
-                optionGroup: '<button type="button" class="multiselect-group dropdown-item"></button>',
-                resetButton: '<div class="multiselect-reset text-center p-2"><button type="button" class="btn btn-sm btn-block btn-outline-secondary"></button></div>'
+                button: '<button type="button" class="multiselect dropdown-toggle" data-toggle="dropdown" data-bs-toggle="dropdown"><span class="multiselect-selected-text"></span> <b class="caret"></b></button>',
+                ul: '<ul class="multiselect-container dropdown-menu"></ul>',
+                filter: '<li class="multiselect-item multiselect-filter"><div class="input-group"><span class="input-group-addon"><i class="glyphicon glyphicon-search"></i></span><input class="form-control multiselect-search" type="text" /></div></li>',
+                filterClearBtn: '<span class="input-group-btn"><button class="btn btn-default multiselect-clear-filter" type="button"><i class="glyphicon glyphicon-remove-circle"></i></button></span>',
+                li: '<li><a tabindex="0"><label></label></a></li>',
+                divider: '<li class="multiselect-item divider"></li>',
+                liGroup: '<li class="multiselect-item multiselect-group"><label></label></li>',
+                resetButton: '<li class="multiselect-reset text-center"><div class="input-group"><a class="btn btn-default btn-block"></a></div></li>'
             }
         },
 
